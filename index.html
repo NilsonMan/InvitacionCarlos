@@ -7,6 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         * {
             margin: 0;
@@ -16,7 +17,7 @@
 
         body {
             font-family: 'Poppins', sans-serif;
-            background: linear-gradient(135deg, #0c2461 0%, #1e3799 50%, #4a69bd 100%);
+            background: linear-gradient(135deg, #1a5f7a 0%, #2a9d8f 50%, #4cc9b8 100%);
             color: white;
             min-height: 100vh;
             padding: 20px;
@@ -27,12 +28,12 @@
         .container {
             max-width: 800px;
             margin: 0 auto;
-            background: rgba(255, 255, 255, 0.95);
+            background: rgba(255, 255, 255, 0.97);
             color: #222;
             border-radius: 25px;
             padding: 40px 30px;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
-            border: 8px solid #FFD700;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+            border: 8px solid #2a9d8f;
             position: relative;
             overflow: hidden;
         }
@@ -45,14 +46,14 @@
             right: 20px;
             font-family: 'Dancing Script', cursive;
             font-size: 4rem;
-            color: rgba(255, 215, 0, 0.15);
+            color: rgba(42, 157, 143, 0.15);
             z-index: 0;
         }
 
         h1 {
             font-family: 'Dancing Script', cursive;
             font-size: 3.8rem;
-            color: #0c2461;
+            color: #1a5f7a;
             margin-bottom: 10px;
             text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
             position: relative;
@@ -62,17 +63,32 @@
         .subtitulo {
             font-size: 1.3rem;
             color: #555;
-            margin-bottom: 40px;
+            margin-bottom: 15px;
             font-weight: 300;
         }
 
+        .tipo-evento {
+            background: linear-gradient(90deg, #1a5f7a, #2a9d8f);
+            color: white;
+            padding: 15px;
+            border-radius: 50px;
+            margin: 0 auto 30px;
+            width: fit-content;
+            font-size: 1.2rem;
+            box-shadow: 0 5px 15px rgba(26, 95, 122, 0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
         .nombre-invitado {
-            background: linear-gradient(90deg, #0c2461, #4a69bd);
+            background: linear-gradient(90deg, #1a5f7a, #2a9d8f);
             color: white;
             padding: 25px;
             border-radius: 15px;
             margin: 30px 0;
-            box-shadow: 0 8px 20px rgba(12, 36, 97, 0.3);
+            box-shadow: 0 8px 20px rgba(26, 95, 122, 0.3);
         }
 
         .nombre-invitado h2 {
@@ -87,12 +103,12 @@
             padding: 25px;
             border-radius: 15px;
             margin: 25px 0;
-            border-left: 6px solid #FFD700;
+            border-left: 6px solid #2a9d8f;
             font-size: 1.4rem;
         }
 
         .fecha-hora i {
-            color: #0c2461;
+            color: #1a5f7a;
             margin-right: 10px;
             font-size: 1.6rem;
         }
@@ -102,14 +118,14 @@
             padding: 30px;
             border-radius: 15px;
             margin: 30px 0;
-            border: 2px dashed #4a69bd;
+            border: 2px dashed #2a9d8f;
             font-size: 1.3rem;
             line-height: 1.8;
             color: #333;
         }
 
         .lugar h3 {
-            color: #0c2461;
+            color: #1a5f7a;
             margin-bottom: 15px;
             font-size: 1.8rem;
         }
@@ -121,9 +137,54 @@
             margin: 20px 0;
         }
 
+        .actividades {
+            background: #e9f5f3;
+            padding: 25px;
+            border-radius: 15px;
+            margin: 30px 0;
+            color: #1a5f7a;
+            font-size: 1.3rem;
+            line-height: 1.8;
+        }
+
+        .actividades h3 {
+            color: #1a5f7a;
+            margin-bottom: 15px;
+            font-size: 1.8rem;
+        }
+
+        .iconos-actividades {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 25px;
+            flex-wrap: wrap;
+        }
+
+        .icono-actividad {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            font-size: 1.1rem;
+            color: #1a5f7a;
+        }
+
+        .icono-actividad i {
+            font-size: 2.5rem;
+            background: white;
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
         .mapa-link {
             display: inline-block;
-            background: #0c2461;
+            background: #1a5f7a;
             color: white;
             padding: 15px 30px;
             border-radius: 50px;
@@ -132,12 +193,12 @@
             margin-top: 20px;
             transition: all 0.3s ease;
             font-size: 1.1rem;
-            box-shadow: 0 5px 15px rgba(12, 36, 97, 0.3);
+            box-shadow: 0 5px 15px rgba(26, 95, 122, 0.3);
         }
 
         .mapa-link:hover {
-            background: #FFD700;
-            color: #0c2461;
+            background: #2a9d8f;
+            color: white;
             transform: translateY(-3px);
             box-shadow: 0 12px 25px rgba(0,0,0,0.25);
         }
@@ -147,12 +208,12 @@
         }
 
         .countdown {
-            background: linear-gradient(135deg, #FFD700, #FFC107);
-            color: #0c2461;
+            background: linear-gradient(135deg, #2a9d8f, #4cc9b8);
+            color: white;
             padding: 30px;
             border-radius: 15px;
             margin: 40px 0;
-            box-shadow: 0 8px 25px rgba(255, 215, 0, 0.3);
+            box-shadow: 0 8px 25px rgba(42, 157, 143, 0.3);
         }
 
         .countdown h3 {
@@ -183,7 +244,7 @@
         .countdown-box span {
             font-size: 3.5rem;
             font-weight: 700;
-            color: #0c2461;
+            color: #1a5f7a;
             display: block;
             line-height: 1;
             text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
@@ -204,14 +265,14 @@
             padding: 25px;
             background: #f8f9fa;
             border-radius: 15px;
-            border-left: 6px solid #4a69bd;
+            border-left: 6px solid #2a9d8f;
             line-height: 1.8;
         }
 
         .firma {
             font-family: 'Dancing Script', cursive;
             font-size: 2.5rem;
-            color: #0c2461;
+            color: #1a5f7a;
             margin: 30px 0;
             text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
         }
@@ -226,8 +287,8 @@
 
         /* Animación de brillo para el título */
         @keyframes brillo {
-            0%, 100% { text-shadow: 0 0 10px rgba(255, 215, 0, 0.7); }
-            50% { text-shadow: 0 0 20px rgba(255, 215, 0, 0.9), 0 0 30px rgba(255, 215, 0, 0.5); }
+            0%, 100% { text-shadow: 0 0 10px rgba(42, 157, 143, 0.7); }
+            50% { text-shadow: 0 0 20px rgba(42, 157, 143, 0.9), 0 0 30px rgba(42, 157, 143, 0.5); }
         }
 
         h1 {
@@ -286,6 +347,16 @@
                 top: 15px;
                 right: 15px;
             }
+            
+            .iconos-actividades {
+                gap: 20px;
+            }
+            
+            .icono-actividad i {
+                font-size: 2rem;
+                width: 60px;
+                height: 60px;
+            }
         }
 
         @media (max-width: 480px) {
@@ -309,42 +380,81 @@
             .nombre-invitado h2 {
                 font-size: 1.7rem;
             }
+            
+            .iconos-actividades {
+                gap: 15px;
+            }
+            
+            .icono-actividad i {
+                font-size: 1.7rem;
+                width: 50px;
+                height: 50px;
+            }
         }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>¡Te Invito a Mis XV Años!</h1>
-        <p class="subtitulo">Una celebración llena de alegría y momentos inolvidables</p>
+        <p class="subtitulo">Una celebración especial en compañía de la familia</p>
+        
+        <div class="tipo-evento">
+            <i class="fas fa-umbrella-beach"></i>
+            <span>Almuerzo familiar con baño de piscina</span>
+        </div>
         
         <div class="nombre-invitado">
             <h2>Carlos Gabriel Novelo Ek</h2>
         </div>
         
         <div class="fecha-hora">
-            <p>🎉 <strong>Domingo, 8 de Febrero de 2026</strong></p>
-            <p>⏰ <strong>2:00 de la tarde</strong></p>
+            <p><i class="fas fa-calendar-alt"></i> <strong>Domingo, 8 de Febrero de 2026</strong></p>
+            <p><i class="fas fa-clock"></i> <strong>2:00 de la tarde</strong></p>
         </div>
         
         <div class="lugar">
-            <h3>📍 Lugar de la Celebración</h3>
+            <h3><i class="fas fa-map-marker-alt"></i> Lugar de la Celebración</h3>
             <p class="direccion">
                 Salón Francisco Villa<br>
                 Por 25, Calle 4ᴰ<br>
                 Francisco Villa, Kanasín, Yucatán
             </p>
-            <p>¡Te esperamos para compartir este día especial!</p>
+            <p>¡Te esperamos para compartir este día especial en familia!</p>
             
             <a href="https://maps.app.goo.gl/AvTQR7Ad9QzTagHJ6" 
                target="_blank" 
                rel="noopener noreferrer"
                class="mapa-link">
-               📍 Ver Ubicación en Google Maps
+               <i class="fas fa-map-marked-alt"></i> Ver Ubicación en Google Maps
             </a>
         </div>
         
+        <div class="actividades">
+            <h3><i class="fas fa-swimming-pool"></i> Actividades del día</h3>
+            <p>Disfrutaremos de un delicioso almuerzo familiar seguido de un refrescante baño de piscina para celebrar juntos este día tan especial.</p>
+            
+            <div class="iconos-actividades">
+                <div class="icono-actividad">
+                    <i class="fas fa-utensils" style="color: #1a5f7a;"></i>
+                    <span>Almuerzo familiar</span>
+                </div>
+                <div class="icono-actividad">
+                    <i class="fas fa-swimming-pool" style="color: #1a5f7a;"></i>
+                    <span>Baño de piscina</span>
+                </div>
+                <div class="icono-actividad">
+                    <i class="fas fa-music" style="color: #1a5f7a;"></i>
+                    <span>Música y diversión</span>
+                </div>
+                <div class="icono-actividad">
+                    <i class="fas fa-camera" style="color: #1a5f7a;"></i>
+                    <span>Recuerdos fotográficos</span>
+                </div>
+            </div>
+        </div>
+        
         <div class="countdown">
-            <h3>⏳ Cuenta Regresiva para la Fiesta</h3>
+            <h3><i class="fas fa-hourglass-half"></i> Cuenta Regresiva para el Almuerzo</h3>
             <div class="countdown-container">
                 <div class="countdown-box">
                     <span id="dias">000</span>
@@ -366,19 +476,24 @@
         </div>
         
         <p class="mensaje-final">
-            "Con gran felicidad y la bendición de Dios, quiero compartir contigo este momento tan especial en mi vida."
+            "Con gran alegría y la bendición de Dios, quiero compartir contigo este momento tan especial en mi vida. Te invito a acompañarme en este almuerzo familiar donde celebraremos juntos mis XV años."
         </p>
         
-        <p class="firma">Carlos Gabriel</p>
+        <div class="firma">Carlos Gabriel</div>
+        
+        <div style="margin-top: 30px; padding: 15px; background: #f0f7f6; border-radius: 10px; color: #1a5f7a;">
+            <p><strong><i class="fas fa-info-circle"></i> Recomendaciones:</strong></p>
+            <p style="font-size: 1.1rem; margin-top: 10px;">Trae tu traje de baño y una toalla para disfrutar de la piscina</p>
+        </div>
         
         <footer>
-            <p>Invitación Digital | Celebración: 8 de Febrero 2026</p>
-            <p style="margin-top: 5px; font-size: 0.8rem; color: #888;"></p>
+            <p>Invitación Digital | Almuerzo familiar: 8 de Febrero 2026</p>
+            <p style="margin-top: 5px; font-size: 0.8rem; color: #888;">¡Esperamos contar con tu presencia!</p>
         </footer>
     </div>
 
     <script>
-        // Configura la fecha de la fiesta (8 de febrero de 2026, 2:00 PM hora de Yucatán)
+        // Configura la fecha del almuerzo (8 de febrero de 2026, 2:00 PM hora de Yucatán)
         const fechaFiesta = new Date('February 8, 2026 14:00:00 GMT-0600').getTime();
         
         function actualizarCuentaRegresiva() {
@@ -395,8 +510,8 @@
                 const countdownContainer = document.querySelector('.countdown-container');
                 if (!countdownContainer.querySelector('h3')) {
                     countdownContainer.innerHTML = 
-                        '<h3 style="color:#0c2461; font-size: 2.5rem; padding: 20px;">¡Hoy es el Gran Día! 🎉</h3>' +
-                        '<p style="color:#0c2461; font-size: 1.2rem;">La fiesta está en marcha</p>';
+                        '<h3 style="color:#fff; font-size: 2.5rem; padding: 20px;">¡Hoy es el Gran Día! 🎉</h3>' +
+                        '<p style="color:#fff; font-size: 1.2rem;">El almuerzo familiar está en marcha</p>';
                 }
                 return;
             }
@@ -418,12 +533,12 @@
             const elemento = document.getElementById(id);
             if (elemento.textContent !== nuevoValor) {
                 elemento.style.transform = 'scale(1.2)';
-                elemento.style.color = '#FFD700';
+                elemento.style.color = '#2a9d8f';
                 
                 setTimeout(() => {
                     elemento.textContent = nuevoValor;
                     elemento.style.transform = 'scale(1)';
-                    elemento.style.color = '#0c2461';
+                    elemento.style.color = '#1a5f7a';
                 }, 150);
             }
         }
@@ -446,30 +561,41 @@
                 document.querySelector('.container').style.transform = 'translateY(0)';
             }, 300);
             
-            // Confeti
+            // Confeti acuático (temática de piscina)
             for(let i = 0; i < 60; i++) {
                 setTimeout(() => {
-                    crearConfeti();
+                    crearConfetiAcuatico();
                 }, i * 50);
             }
         });
         
-        function crearConfeti() {
+        function crearConfetiAcuatico() {
             const confeti = document.createElement('div');
-            const colores = ['#FFD700', '#0c2461', '#4a69bd', '#FF6B6B', '#1DD1A1'];
-            const tamanos = ['8px', '10px', '12px', '6px'];
-            const formas = ['circle', 'square'];
+            const colores = ['#1a5f7a', '#2a9d8f', '#4cc9b8', '#8ac6d1', '#a8e6cf'];
+            const formas = ['circle', 'square', 'triangle'];
+            const formaSeleccionada = formas[Math.floor(Math.random() * formas.length)];
             
             confeti.style.position = 'fixed';
-            confeti.style.width = tamanos[Math.floor(Math.random() * tamanos.length)];
-            confeti.style.height = confeti.style.width;
+            confeti.style.width = '10px';
+            confeti.style.height = '10px';
             confeti.style.background = colores[Math.floor(Math.random() * colores.length)];
-            confeti.style.borderRadius = formas[Math.floor(Math.random() * formas.length)] === 'circle' ? '50%' : '2px';
             confeti.style.left = Math.random() * 100 + 'vw';
             confeti.style.top = '-20px';
             confeti.style.zIndex = '9999';
             confeti.style.pointerEvents = 'none';
             confeti.style.opacity = '0.9';
+            
+            // Formas diferentes
+            if (formaSeleccionada === 'circle') {
+                confeti.style.borderRadius = '50%';
+            } else if (formaSeleccionada === 'triangle') {
+                confeti.style.width = '0';
+                confeti.style.height = '0';
+                confeti.style.borderLeft = '6px solid transparent';
+                confeti.style.borderRight = '6px solid transparent';
+                confeti.style.borderBottom = '10px solid ' + colores[Math.floor(Math.random() * colores.length)];
+                confeti.style.background = 'transparent';
+            }
             
             document.body.appendChild(confeti);
             
@@ -500,7 +626,7 @@
                     confetiClick.style.position = 'fixed';
                     confetiClick.style.width = '8px';
                     confetiClick.style.height = '8px';
-                    confetiClick.style.background = ['#FFD700', '#0c2461', '#4a69bd'][Math.floor(Math.random() * 3)];
+                    confetiClick.style.background = ['#1a5f7a', '#2a9d8f', '#4cc9b8'][Math.floor(Math.random() * 3)];
                     confetiClick.style.borderRadius = '50%';
                     confetiClick.style.left = e.clientX + 'px';
                     confetiClick.style.top = e.clientY + 'px';
